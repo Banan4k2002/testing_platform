@@ -4,7 +4,7 @@ from .models import TestPerson, Test, Answer, Group, Theme, NameSprav
 
 @admin.register(TestPerson)
 class TestPersonAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('log_test', 'passw_test')
 
 
 @admin.register(Test)
@@ -19,14 +19,14 @@ class AnswerAdmin(admin.ModelAdmin):
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('group_name',)
 
 
 @admin.register(Theme)
 class ThemeAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('theme_name',)
 
 
 @admin.register(NameSprav)
 class NameSpravAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('item_name', 'item_name_cod')

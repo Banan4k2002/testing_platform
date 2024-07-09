@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты тестирования</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+        <section>
+        <main class="mt-5 mb-5">
+            <div class="container">
+                <div class="main-body">
+                        <div class="col-lg-8">
+                            <div class="card p-3 h-100 card-soft-primary">
+                                <div class="profile-card-body">
+                                    <div>
+                                        <h5 class="text-200 fs--1">Результаты пользователя {{ user.fio }}</h5>
+                                        <div class="table-responsive mt-5">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="text-primary text-center">Показатели</th>
+                                                        <th scope="col" class="text-primary text-center">Результаты</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-200 fw-bold text-center">Всего вопросов в тесте</td>
+                                                        <td class="text-200 fw-bold text-center">42</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-200 fw-bold text-center">Процент правильных ответов</td>
+                                                        <td class="text-200 fw-bold text-center">{{ user.result_person }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <a class="btn btn-primary rounded-pill"
+                                            href="{% url 'testing:start_test' %}"><i class="fa fa-arrow-circle-left"></i>Попробовать ещё раз</a>
+                                            <a class="btn btn-primary rounded-pill"
+                                            href="{% url 'testing:exit' %}"><i class="fa fa-arrow-circle-left"></i>Завершить работу</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    </body>
+</html>
